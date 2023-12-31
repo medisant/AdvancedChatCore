@@ -77,6 +77,7 @@ public class DefaultChatSuggestor extends AdvancedChatScreenSection {
                         10,
                         true,
                         -805306368);
+        this.commandSuggestor.setCanLeave(false);
         this.commandSuggestor.refresh();
     }
 }
