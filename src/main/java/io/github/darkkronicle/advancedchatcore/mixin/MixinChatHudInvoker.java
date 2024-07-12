@@ -18,5 +18,5 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(ChatHud.class)
 public interface MixinChatHudInvoker {
     @Invoker
-    void invokeAddMessage(Text message, @Nullable MessageSignatureData signature, int ticks, @Nullable MessageIndicator indicator, boolean refresh);
+    void invokeAddMessage(Text message, @Nullable MessageSignatureData signature, @Nullable MessageIndicator indicator);
 }

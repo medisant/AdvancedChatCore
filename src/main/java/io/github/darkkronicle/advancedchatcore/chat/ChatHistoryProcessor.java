@@ -31,7 +31,7 @@ public class ChatHistoryProcessor implements IMessageProcessor {
     private static boolean sendToHud(Text text, @Nullable MessageSignatureData signature, MessageIndicator indicator) {
         if (AdvancedChatCore.FORWARD_TO_HUD) {
             ((MixinChatHudInvoker) MinecraftClient.getInstance().inGameHud.getChatHud()).invokeAddMessage(
-                    text, signature, MinecraftClient.getInstance().inGameHud.getTicks(), indicator, false);
+                    text, signature, indicator);
             return true;
         }
         return false;
